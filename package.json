@@ -1,0 +1,28 @@
+{
+  "name": "isomorphic-validation",
+  "version": "0.1.0",
+  "description": "An isomorphic validation engine for browser client and node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huei90/isomorphic-validation"
+  },
+  "keywords": [
+    "validation",
+    "validate",
+    "validator",
+    "isomorphic"
+  ],
+  "author": "huei90",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huei90/isomorphic-validation/issues"
+  },
+  "homepage": "https://github.com/huei90/isomorphic-validation#readme",
+  "devDependencies": {
+    "ava": "^0.11.0"
+  }
+}
