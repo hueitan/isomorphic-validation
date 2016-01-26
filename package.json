@@ -4,7 +4,8 @@
   "description": "An isomorphic validation engine for browser client and node app",
   "main": "index.js",
   "scripts": {
-    "test": "ava test"
+    "test": "ava test",
+    "cov": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,9 @@
   },
   "homepage": "https://github.com/huei90/isomorphic-validation#readme",
   "devDependencies": {
-    "ava": "^0.11.0"
+    "ava": "^0.11.0",
+    "coveralls": "^2.11.6",
+    "nyc": "^5.5.0"
   },
   "engineStrict": true,
   "engines": {

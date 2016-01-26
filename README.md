@@ -1,4 +1,4 @@
-ISOMORPHIC VALIDATION [![Build Status](https://travis-ci.org/huei90/isomorphic-validation.png?branch=master)](https://travis-ci.org/huei90/isomorphic-validation)
+ISOMORPHIC VALIDATION [![Build Status](https://travis-ci.org/huei90/isomorphic-validation.png?branch=master)](https://travis-ci.org/huei90/isomorphic-validation) [![Coverage Status](https://coveralls.io/repos/github/huei90/isomorphic-validation/badge.svg?branch=master)](https://coveralls.io/github/huei90/isomorphic-validation?branch=master)
 ===
 
 An isomorphic validation engine for browser client and node app.

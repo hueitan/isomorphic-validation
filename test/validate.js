@@ -59,7 +59,7 @@ test('validate with one fail', t => {
     t.pass()});
 });
 
-test('validate with function', t => {
+test('validate with function success', t => {
   let type = {'required': {validator: v => !!v}};
   let iv = new isomorphicValidation(type);
 
@@ -73,6 +73,22 @@ test('validate with function', t => {
     type: 'required'
   }).then(() => t.pass())
   .catch(() => t.fail());
+});
+
+test('validate with function fail', t => {
+  let type = {'required': {validator: v => !!v}};
+  let iv = new isomorphicValidation(type);
+
+  return iv.validate({
+    name: 'name',
+    value: '',
+    type: 'required'
+  },{
+    name: 'gender',
+    value: 'male',
+    type: 'required'
+  }).then(() => t.fail())
+  .catch(() => t.pass());
 });
 
 test('validate with function promise', t => {
@@ -93,4 +109,19 @@ test('validate with function promise', t => {
     type: 'required'
   }).then((v) => t.pass())
   .catch((v) => t.fail());
+});
+
+test('validate with invalid type', t => {
+  let type = {'required': {validator: /^.+$/}};
+  let iv = new isomorphicValidation(type);
+
+  return iv.validate({
+    name: 'name',
+    value: '',
+    type: 'abc'
+  }).then(() => t.fail())
+  .catch(v => {
+    t.same(v, 'abc is not defined');
+    t.pass();
+  });
 });
