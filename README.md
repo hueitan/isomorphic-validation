@@ -55,10 +55,20 @@ validator type accepts `RegExp` and `Function`
 
 ```js
 // adding multiples:
-// iv.addValidation({'required': {validator: /^.+$/}, age: {validator: /\d+/}})
+iv.addValidation({'required': {validator: /^.+$/}, age: {validator: /\d+/}})
 
 // adding function:
-// iv.addValidation({'required': {validator: (v) => !!v})
+iv.addValidation({'required': {validator: (v) => !!v})
+```
+
+type format
+
+```js
+{
+  'required': { // validation type name
+    'validator': /^.+$/ // validation type - RegExp or Function
+  }
+}
 ```
 
 #### validate form
@@ -78,6 +88,16 @@ iv.validate([{
   }])
   .then(/* ... */)
   .catch(/* ... */);
+```
+
+form format
+
+```js
+[{
+  name: 'name', // form name
+  value: 'huei', // value of the form name
+  type: 'required' // type name (given in type format)
+}]
 ```
 
 #### return all types
